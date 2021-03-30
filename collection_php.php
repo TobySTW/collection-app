@@ -5,9 +5,13 @@ $query = $db->prepare('SELECT * FROM `collection_table`;');
 $query->execute();
 $result = $query->fetchAll();
 
-
-echo '<pre>';
-var_dump($result);
-echo '</pre>';
-
+foreach ($result as $item) {
+    echo '<pre>';
+    echo '<pre>';
+    echo $item['title'] . ' ' . '(' . $item['release'] . ')';
+    echo '</pre>';
+    echo $item['reason'];
+    echo '</pre>';
+    echo '<br>';
+}
 ?>
